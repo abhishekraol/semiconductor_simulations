@@ -1,13 +1,8 @@
 %Description: Plot of 2DEG density in heterostructure with varied mole
-%fractions (EE222 HW4 PROBLEM1)
+%fractions (EE222 HW4 PROBLEM 1)
 %Author: Abhishek Raol
-%READ FIRST: not sure about the lattice constant (a) in the Ppe
-%equation. should a the lattice constant of the interfacing semiconductor,
-%or should it be the lattice constant of the semiconductor if it were
-%relaxed. If so then do you use the lattice constant of GaN or AlN?
 %NOTE: inefficient/repetitive use of indexing x in a for loop and again 
 %in an array to plot the output 
-%Last Update: 4/24/19 12:14am 
 %
 % Heterostructure:
 %
@@ -40,11 +35,11 @@ Psp_GaN = -0.029;
 for i = 1:4        
 %Y structure
     a0_y = (y(i)*a0_AlN) + (y_n(i)*a0_GaN); %y structure a_0y needed
-    e31_y = (y(i)*e31_AlN) + (y_n(i)*e31_GaN);
-    e33_y = (y(i)*e33_AlN) + (y_n(i)*e33_GaN);
-    c13_y = (y(i)*c13_AlN) + (y_n(i)*c13_GaN);
-    c33_y = (y(i)*c33_AlN) + (y_n(i)*c33_GaN);
-        
+%     e31_y = (y(i)*e31_AlN) + (y_n(i)*e31_GaN);
+%     e33_y = (y(i)*e33_AlN) + (y_n(i)*e33_GaN);
+%     c13_y = (y(i)*c13_AlN) + (y_n(i)*c13_GaN);
+%     c33_y = (y(i)*c33_AlN) + (y_n(i)*c33_GaN);
+%         
     %for each y, sweep x structure 10 points
     x = 0;
     x_n = 1-x; %x complement
@@ -55,7 +50,6 @@ for i = 1:4
         e33_x = (x*e33_AlN) + (x_n*e33_GaN);
         c13_x = (x*c13_AlN) + (x_n*c13_GaN);
         c33_x = (x*c33_AlN) + (x_n*c33_GaN);
-        
         %----setup 2DEG(or 2DHG) equation----
         %solve for piezoelectric and spontaneous polarization charge Y
         %Ppe_y = 2 * ((a0_x-a0_y)/a0_y) * ( e31_y - (e33_y*(c13_y/c33_y)) ); %!!!!!

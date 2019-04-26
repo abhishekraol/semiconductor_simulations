@@ -1,13 +1,8 @@
 %Description: Plot of 2DEG density in heterostructure with varied mole
 %fractions (EE222 HW4 PROBLEM 2)
 %Author: Abhishek Raol
-%READ FIRST: not sure about the lattice constant (a) in the Ppe
-%equation. should a the lattice constant of the interfacing semiconductor,
-%or should it be the lattice constant of the semiconductor if it were
-%relaxed. If so then do you use the lattice constant of GaN or AlN?
 %NOTE: inefficient/repetitive use of indexing x in a for loop and again 
 %in an array to plot the output 
-%Last Update: 4/24/19 12:14am 
 %
 % Heterostructure:
 %
